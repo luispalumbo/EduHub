@@ -3,34 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Knowledge Hub</title>
+    <title>Interactive Learning Hub</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
-        <h1>Education & Insights</h1>
-        <p>Interactive tools and resources for my students.</p>
+        <h1>Code & Discovery Hub</h1>
+        <p>Explore, calculate, and test your knowledge!</p>
     </header>
 
     <main>
-        <section id="intro">
-            <h2>Welcome</h2>
-            <p>This site showcases my JavaScript projects and classroom materials. Explore the tools below!</p>
+        <section class="tool-section">
+            <h2>Quick Calculator</h2>
+            <div class="card calc-container">
+                <input type="number" id="num1" placeholder="Number 1">
+                <select id="operator">
+                    <option value="add">+</option>
+                    <option value="subtract">-</option>
+                    <option value="multiply">×</option>
+                    <option value="divide">÷</option>
+                </select>
+                <input type="number" id="num2" placeholder="Number 2">
+                <button onclick="runCalculator()">Calculate</button>
+                <div id="calcResult" class="result-box">Result: --</div>
+            </div>
         </section>
 
-        <section id="demo-area">
-            <h3>Interactive Tool Demo</h3>
-            <div class="card">
-                <p>Click the button below to see JavaScript in action:</p>
-                <button id="actionButton">Click Me!</button>
-                <p id="message"></p>
+        <section class="tool-section">
+            <h2>Knowledge Check</h2>
+            <div class="card quiz-container">
+                <p id="questionText">Which language is used for web styling?</p>
+                <div class="quiz-options">
+                    <button onclick="checkAnswer('HTML')">HTML</button>
+                    <button onclick="checkAnswer('CSS')">CSS</button>
+                    <button onclick="checkAnswer('Python')">Python</button>
+                </div>
+                <p id="quizFeedback"></p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 - Hosted on GitHub Pages</p>
+        <p>Built with JavaScript & GitHub Pages</p>
     </footer>
 
     <script src="js/script.js"></script>
